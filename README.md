@@ -309,9 +309,9 @@ MIT License - see [LICENSE](LICENSE) for details
 
 ## 📧 Contact
 
-**Shuai Zhiyu**  
+**Zhiyu Shuai**  
 - GitHub: [@peaceouty](https://github.com/peaceouty)
-- Email: your.email@example.com
+- Email: zshuai@umich.edu
 
 ---
 
@@ -320,10 +320,10 @@ MIT License - see [LICENSE](LICENSE) for details
 If you use this work in your research, please cite:
 
 ```bibtex
-@software{efficient_llm_inference_2024,
-  author = {Shuai Zhiyu},
+@software{efficient_llm_inference_2026,
+  author = {Zhiyu Shuai},
   title = {Efficient LLM Inference: Custom Fused Kernels \& Quantization Profiling},
-  year = {2024},
+  year = {2026},
   url = {https://github.com/peaceouty/Efficient-LLM-Inference}
 }
 ```
@@ -331,3 +331,4 @@ If you use this work in your research, please cite:
 ---
 
 **⭐ Star this repo if you find it useful!**
+
