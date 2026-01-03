@@ -54,10 +54,10 @@ class PerformanceProfiler:
         
         results = {
             'kernel_name': name,
-            'avg_time_ms': avg_time_ms,
+            'avg_latency_ms': avg_time_ms,
             'total_time_ms': elapsed_time_ms,
-            'iterations': num_iterations,
-            'throughput_ops_per_sec': 1000 / avg_time_ms,
+            'num_iterations': num_iterations,
+            'throughput_ops_sec': 1000 / avg_time_ms,
             'memory_allocated_mb': memory_allocated,
             'memory_reserved_mb': memory_reserved,
             'input_shape': tuple(input_data.shape),
@@ -109,7 +109,7 @@ class PerformanceProfiler:
         print("\n" + "="*80)
         print("COMPARISON RESULTS")
         print("="*80)
-        print(df[['kernel_name', 'avg_time_ms', 'speedup', 'memory_allocated_mb']].to_string(index=False))
+        print(df[['kernel_name', 'avg_latency_ms', 'speedup', 'memory_allocated_mb']].to_string(index=False))
         print("="*80 + "\n")
         
         return df
