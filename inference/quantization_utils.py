@@ -53,7 +53,7 @@ def analyze_model_size(model_path: str, quantization: Optional[str] = None):
     print("\n" + "="*60)
     print("MODEL SIZE ANALYSIS")
     print("="*60)
-    print(f"Base Model (FP16): {base_model_size_gb:.2f} GB")
+    print(f"Base Model (FP16):     {base_model_size_gb:.2f} GB")
     
     if quantization:
         print(f"Quantized ({quantization.upper()}): {quantized_size_gb:.2f} GB")

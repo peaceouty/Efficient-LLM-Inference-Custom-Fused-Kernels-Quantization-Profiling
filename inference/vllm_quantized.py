@@ -23,10 +23,11 @@ def load_quantized_model(
         raise ImportError("vLLM is required. Install with: pip install vllm")
     
     print(f"\n=== Loading Model: {model_name} ===")
-    print(f"Max Model Length: {max_model_len}")
-    print(f"GPU Memory Utilization: {gpu_memory_utilization * 100}%")
-    print("Quantization: AWQ 4-bit")
-    print("KV-Cache: PagedAttention enabled\n")
+    print(f"Configuration:")
+    print(f"  - Max Length: {max_model_len}")
+    print(f"  - GPU Memory: {gpu_memory_utilization * 100}%")
+    print(f"  - Quantization: AWQ 4-bit")
+    print(f"  - KV-Cache: PagedAttention\n")
     
     llm = LLM(
         model=model_name,
