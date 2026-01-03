@@ -7,14 +7,14 @@ warnings.filterwarnings('ignore')
 
 
 def check_section(title):
-    """Print section header."""
+    """Print formatted section header."""
     print("\n" + "="*70)
     print(f"  {title}")
     print("="*70)
 
 
 def check_cuda():
-    """Check CUDA availability."""
+    """Verify CUDA availability and GPU specifications."""
     check_section("1. CUDA Check")
     
     if torch.cuda.is_available():
