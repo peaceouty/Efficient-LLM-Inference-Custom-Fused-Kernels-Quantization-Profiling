@@ -5,10 +5,7 @@ from cuda_kernels import FusedRMSNorm, FusedSiLU
 
 
 def simple_transformer_layer_example():
-    """
-    Simplified transformer layer using custom kernels.
-    Shows how to integrate fused operations.
-    """
+    """Demo: Transformer layer using custom fused kernels."""
     print("\n" + "="*80)
     print("EXAMPLE: Transformer Layer with Custom Kernels")
     print("="*80)
@@ -63,9 +60,7 @@ def simple_transformer_layer_example():
 
 
 def quantization_example():
-    """
-    Show model size reduction with quantization.
-    """
+    """Demo: Model size reduction with quantization analysis."""
     from inference.quantization_utils import compare_quantization_methods, analyze_model_size
     
     print("\nRunning quantization analysis...")
