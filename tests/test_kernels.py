@@ -16,7 +16,7 @@ class TestCustomKernels:
     """Test custom CUDA kernel implementations."""
     
     def test_rmsnorm_correctness(self):
-        """Verify RMSNorm output matches PyTorch reference."""
+        """Verify RMSNorm matches PyTorch reference implementation."""
         batch_size, hidden_size = 4, 1024
         eps = 1e-6
         
@@ -39,7 +39,7 @@ class TestCustomKernels:
         )
     
     def test_silu_correctness(self):
-        """Verify SiLU activation matches PyTorch."""
+        """Verify SiLU activation matches PyTorch implementation."""
         x = torch.randn(128, 2048, device='cuda', dtype=torch.float32)
         
         # Custom implementation
