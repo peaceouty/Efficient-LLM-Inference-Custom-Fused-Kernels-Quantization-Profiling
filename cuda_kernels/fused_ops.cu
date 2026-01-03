@@ -3,8 +3,9 @@
 #include <cuda_runtime.h>
 #include <vector>
 
-// CUDA kernel for fused RMSNorm
-// RMSNorm is used in Llama models: y = x / sqrt(mean(x^2) + eps) * weight
+// Fused RMSNorm kernel for Llama models
+// Reduces memory bandwidth via single-pass computation
+// Formula: y = x / sqrt(mean(x^2) + eps) * weight
 template <typename scalar_t>
 __global__ void fused_rmsnorm_kernel(
     const scalar_t* __restrict__ input,
@@ -50,8 +51,8 @@ __global__ void fused_rmsnorm_kernel(
     }
 }
 
-// CUDA kernel for fused SiLU (Swish) activation
-// SiLU(x) = x * sigmoid(x) - commonly used in modern LLMs
+// Fused SiLU activation: x * sigmoid(x)
+// Single kernel reduces memory traffic
 template <typename scalar_t>
 __global__ void fused_silu_kernel(
     const scalar_t* __restrict__ input,
