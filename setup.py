@@ -4,9 +4,11 @@ import os
 
 setup(
     name='efficient_llm_kernels',
-    version='0.1.0',
+    version='1.0.0',
     author='Shuai Zhiyu',
+    author_email='zshuai@umich.edu',
     description='Custom CUDA kernels for efficient LLM inference',
+    long_description='Fused CUDA kernels and quantization tools for optimized LLM inference on consumer GPUs',
     ext_modules=[
         CUDAExtension(
             name='fused_kernels',
