@@ -18,6 +18,20 @@ def load_quantized_model(
     max_model_len: int = 4096,
     gpu_memory_utilization: float = 0.90
 ):
+    """
+    Load a quantized model using vLLM.
+    
+    Args:
+        model_name: HuggingFace model ID
+        max_model_len: Maximum context length
+        gpu_memory_utilization: Fraction of GPU memory to use
+    """
+    if not torch.cuda.is_available():
+        raise RuntimeError("CUDA is not available. This script requires a GPU.")
+
+    if not VLLM_AVAILABLE:
+        raise ImportError("vLLM library is required but not installed.")
+
     """Load AWQ quantized model with vLLM engine."""
     if not VLLM_AVAILABLE:
         raise ImportError("vLLM is required. Install with: pip install vllm")
