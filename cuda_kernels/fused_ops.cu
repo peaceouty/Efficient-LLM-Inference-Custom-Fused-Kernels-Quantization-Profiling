@@ -1,3 +1,16 @@
+/*
+ * Optimized Fused Kernels for LLM Inference
+ * 
+ * This file contains custom CUDA kernels for:
+ * 1. RMSNorm: Fused reduction and normalization to minimize global memory reads.
+ * 2. SiLU: Fused activation function.
+ * 
+ * Optimization Strategy:
+ * - Block-level reduction for variance calculation.
+ * - Register caching for weight parameters.
+ * - Coalesced memory access patterns.
+ */
+
 #include <torch/extension.h>
 #include <cuda.h>
 #include <cuda_runtime.h>
