@@ -8,3 +8,6 @@ tqdm>=4.65.0
 matplotlib>=3.7.0
 pandas>=2.0.0
 ninja>=1.11.1
+scipy>=1.10.0
+packaging>=23.0
+pytest>=7.4.0
